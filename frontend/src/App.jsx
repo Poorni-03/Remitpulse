@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Invoices from "./pages/Invoices";
 import Payments from "./pages/Payments";
 import Exceptions from "./pages/Exceptions";
-import Settings from "./pages/Settings";
+import Configuration from "./pages/Configuration";
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -24,7 +24,8 @@ function AppRoutes() {
       <Route path="/invoices" element={<PrivateRoute><Invoices /></PrivateRoute>} />
       <Route path="/payments" element={<PrivateRoute><Payments /></PrivateRoute>} />
       <Route path="/exceptions" element={<PrivateRoute><Exceptions /></PrivateRoute>} />
-      <Route path="/settings" element={<PrivateRoute><Settings /></PrivateRoute>} />
+      <Route path="/configuration" element={<PrivateRoute><Configuration /></PrivateRoute>} />
+      <Route path="/settings" element={<Navigate to="/configuration" replace />} />
     </Routes>
   );
 }

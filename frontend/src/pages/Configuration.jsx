@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import apiClient from "../api/client";
 import Layout from "../components/Layout";
 
-export default function Settings() {
+export default function Configuration() {
   const [tdsRates, setTdsRates] = useState([]);
   const [reasonCodes, setReasonCodes] = useState([]);
   const [newRate, setNewRate] = useState({ section: "", ratePercent: "", description: "" });
@@ -69,7 +69,7 @@ export default function Settings() {
 
   return (
     <Layout>
-      <h1 className="text-2xl font-bold mb-6">Settings</h1>
+      <h1 className="text-2xl font-bold mb-6">Configuration</h1>
       {msg && <div className="bg-red-50 text-red-700 p-3 rounded mb-4 text-sm">{msg}</div>}
 
       <div className="grid md:grid-cols-2 gap-6">

@@ -7,7 +7,7 @@ const navItems = [
   { to: "/invoices", label: "Invoices" },
   { to: "/payments", label: "Payments" },
   { to: "/exceptions", label: "Exception Queue" },
-  { to: "/settings", label: "Settings" },
+  { to: "/configuration", label: "Configuration" },
 ];
 
 export default function Layout({ children }) {
